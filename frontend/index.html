@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyLawLLM | Sri Lankan Legal Intelligence</title>
+  <meta name="description" content="An authoritative, AI-powered legal assistant specializing in the Laws of Sri Lanka.">
+  
+  <!-- Typography: Playfair for Authority, Inter for Clarity -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Add Favicon (Placeholder or generated later) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+</head>
+<body class="theme-dark">
+  <div class="app-container">
+    <!-- Sophisticated Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <span class="logo-icon">⚖️</span>
+        <div class="logo-text">
+          <h1>MyLawLLM</h1>
+          <p>Sri Lankan Legal Intelligence</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="status-pill">
+          <span class="status-dot"></span>
+          Verified Database
+        </span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <!-- Sources Dashboard (Right Side / Hidden on Mobile) -->
+      <aside class="sources-sidebar" id="sources-sidebar">
+        <div class="sidebar-header">
+          <h3>Legal References</h3>
+          <p>Verified source documents</p>
+        </div>
+        <div class="sources-list" id="sources-list">
+          <!-- Populated via JS -->
+          <div class="source-empty-state">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+            <p>Ask a question to view citations</p>
+          </div>
+        </div>
+        <footer class="sidebar-footer">
+          <p>Developed by Savinu Gunarathna</p>
+        </footer>
+      </aside>
+
+      <!-- Central Workspace -->
+      <section class="chat-workspace">
+        <div class="chat-history" id="chat-history">
+          <!-- Welcome Message -->
+          <div class="message bot welcome-message">
+            <div class="bot-avatar">⚖️</div>
+            <div class="message-content">
+              <h2>Good Afternoon.</h2>
+              <p>I am MyLawLLM, an intelligence system specialized in the legal framework of Sri Lanka. How may I assist your legal research today?</p>
+              <div class="suggestion-chips">
+                <button class="chip" onclick="quickQuery('What are my rights as a tenant in Sri Lanka?')">Tenant Rights</button>
+                <button class="chip" onclick="quickQuery('Explain the termination process in labor law.')">Labor Law</button>
+                <button class="chip" onclick="quickQuery('What is the penalty for cheque dishonor?')">Criminal Law</button>
+              </div>
+              <p class="disclaimer"><strong>Notice:</strong> This assistant provides information based on official statutes. It does not constitute formal legal advice.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="action-bar">
+          <form class="input-container" id="query-form">
+            <textarea 
+              id="user-input" 
+              placeholder="Enter your legal inquiry..." 
+              rows="1"
+              autocomplete="off"
+            ></textarea>
+            <button type="submit" id="send-btn" aria-label="Send Query">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="action-footer">
+            <p>Press Enter to send. Shift + Enter for new line.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/app.js"></script>
+</body>
+</html>

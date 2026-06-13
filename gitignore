@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.coverage
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.venv/
+venv/
+ENV/
+env/
+
+# Environment
+.env
+.env.local
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Web / Node
+node_modules/
+dist/
+build/
+.next/
+out/
+.DS_Store
+
+# Large Data (Optional - keeping .pkl for now as per plan, but good to know)
+# *.pkl
+# PDFs/
