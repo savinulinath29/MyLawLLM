@@ -1,0 +1,5 @@
+[build]
+builder = "railpack"
+
+[build.config]
+pythonVersion = "3.12"
